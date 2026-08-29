@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "functions": {
+    "api/rpc.js": {
+      "maxDuration": 30
+    }
+  },
+  "routes": [
+    {
+      "src": "/rpc",
+      "dest": "/api/rpc.js"
+    },
+    {
+      "src": "/rpc/",
+      "dest": "/api/rpc.js"
+    }
+  ]
+}
