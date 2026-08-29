@@ -1,19 +1,12 @@
 {
-  "version": 2,
-  "functions": {
-    "api/rpc.js": {
-      "runtime": "nodejs20.x",
-      "maxDuration": 30
-    }
-  },
   "rewrites": [
     {
       "source": "/rpc",
-      "destination": "/api/rpc.js"
+      "destination": "/api/rpc"
     },
     {
-      "source": "/rpc/",
-      "destination": "/api/rpc.js"
+      "source": "/rpc/:path*",
+      "destination": "/api/rpc"
     }
   ]
 }
