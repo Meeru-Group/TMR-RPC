@@ -120,6 +120,7 @@ export default async function handler(req, res) {
           mode: "browser-readonly",
           rpc_version: process.env.TMR_RPC_VERSION || "1.0.0",
           post_required_for_transactions: true,
+          upstream_configured: Boolean(process.env.TMR_UPSTREAM_RPC_URL),
           methods: getMethods()
         },
         id: null
